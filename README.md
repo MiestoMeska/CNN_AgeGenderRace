@@ -1,7 +1,7 @@
 # Practical Deep Learning
 # Age, Race and Gender classification
 
-![Faces](https://github.com/TuringCollegeSubmissions/vruzga-DL.3.5/blob/master/assets/img/Faces_generic.JPG)
+![Faces](https://github.com/MiestoMeska/CNN_AgeGenderRace/blob/main/assets/img/Faces_generic.JPG)
 
 ## Introduction
 
@@ -31,18 +31,18 @@ In this project, we build on our deep learning knowledge to tackle a complex cla
 
 - **Acquisition:** The dataset used for this project is provided [by the UTKFace dataset on Kaggle](https://www.kaggle.com/datasets/jangedoo/utkface-new). It contains facial images labeled with three attributes: age, race, and gender. The dataset spans a wide range of ages and includes diverse racial and gender labels, making it suitable for multi-objective classification tasks.
 
-- **Dataset Exploration:** [An Exploratory Data Analysis (EDA)](https://github.com/TuringCollegeSubmissions/vruzga-DL.3.5/blob/master/notebooks/1.EDA.ipynb) provides insights into the distribution of age, race, and gender categories within the UTKFace dataset. This analysis helps understand the balance of the dataset, detect any potential class imbalances, and identify key characteristics of the images, such as the age group distributions and racial diversity. Understanding these distributions is essential for guiding model design and ensuring fair representation across all categories.
+- **Dataset Exploration:** [An Exploratory Data Analysis (EDA)](https://github.com/MiestoMeska/CNN_AgeGenderRace/blob/main/notebooks/1.EDA.ipynb) provides insights into the distribution of age, race, and gender categories within the UTKFace dataset. This analysis helps understand the balance of the dataset, detect any potential class imbalances, and identify key characteristics of the images, such as the age group distributions and racial diversity. Understanding these distributions is essential for guiding model design and ensuring fair representation across all categories.
 
 - **Expansion of the Dataset:** The dataset expansion process is documented across three notebooks, with each step aimed at improving the quality and consistency of the combined dataset:
 
-1. Analyzing Face Positioning in the UTKFace Dataset: [The Face Alignment Exploration Notebook](https://github.com/TuringCollegeSubmissions/vruzga-DL.3.5/blob/master/notebooks/2.face_alignment_exploration.ipynb) analyzes the positioning of faces in the UTKFace dataset. This ensures that the facial regions are consistently aligned, which is crucial for achieving high model performance.
-2. Processing Images for Consistent Zoom, Crop, and Face Alignment: [The Image processing Notebook](https://github.com/TuringCollegeSubmissions/vruzga-DL.3.5/blob/master/notebooks/3.image_process_FairFace.ipynb) focuses on processing the FairFace dataset to ensure the same zoom level, crop, and face alignment as UTKFace. This preprocessing step standardizes the images across datasets, making them compatible for merging.
-3. Label Alignment and Merging Datasets: [The Dataset Merging Notebook](https://github.com/TuringCollegeSubmissions/vruzga-DL.3.5/blob/master/notebooks/4.dataset_merging.ipynb) deals with aligning the labels between the UTKFace and FairFace datasets and merging them into a unified dataset. This ensures that the combined dataset has consistent and properly formatted labels for age, race, and gender.
+1. Analyzing Face Positioning in the UTKFace Dataset: [The Face Alignment Exploration Notebook](https://github.com/MiestoMeska/CNN_AgeGenderRace/blob/main/notebooks/2.face_alignment_exploration.ipynb) analyzes the positioning of faces in the UTKFace dataset. This ensures that the facial regions are consistently aligned, which is crucial for achieving high model performance.
+2. Processing Images for Consistent Zoom, Crop, and Face Alignment: [The Image processing Notebook](https://github.com/MiestoMeska/CNN_AgeGenderRace/blob/main/notebooks/3.image_process_FairFace.ipynb) focuses on processing the FairFace dataset to ensure the same zoom level, crop, and face alignment as UTKFace. This preprocessing step standardizes the images across datasets, making them compatible for merging.
+3. Label Alignment and Merging Datasets: [The Dataset Merging Notebook](https://github.com/MiestoMeska/CNN_AgeGenderRace/blob/main/notebooks/4.dataset_merging.ipynb) deals with aligning the labels between the UTKFace and FairFace datasets and merging them into a unified dataset. This ensures that the combined dataset has consistent and properly formatted labels for age, race, and gender.
 
-- **The Expanded Dataset EDA:** After merging the UTKFace and FairFace datasets, the combined dataset was cleaned by retaining only images where faces were detected using the MTCNN and FAN models. The data cleaning process is documented in the [The Merged Dataset Cleaning Notebook](https://github.com/TuringCollegeSubmissions/vruzga-DL.3.5/blob/master/notebooks/5.merged_dataset_cleaning.ipynb).
+- **The Expanded Dataset EDA:** After merging the UTKFace and FairFace datasets, the combined dataset was cleaned by retaining only images where faces were detected using the MTCNN and FAN models. The data cleaning process is documented in the [The Merged Dataset Cleaning Notebook](https://github.com/MiestoMeska/CNN_AgeGenderRace/blob/main/notebooks/5.merged_dataset_cleaning.ipynb).
 
 
-Following the cleaning, an exploratory data analysis (EDA) was conducted on the cleaned dataset. The entire process and key insights from the EDA are also detailed in the [The Merged Dataset EDA Notebook](https://github.com/TuringCollegeSubmissions/vruzga-DL.3.5/blob/master/notebooks/6.EDA_merged_dataset.ipynb).
+Following the cleaning, an exploratory data analysis (EDA) was conducted on the cleaned dataset. The entire process and key insights from the EDA are also detailed in the [The Merged Dataset EDA Notebook](https://github.com/MiestoMeska/CNN_AgeGenderRace/blob/main/notebooks/6.EDA_merged_dataset.ipynb).
 
 ### Model Creation
 
@@ -56,7 +56,7 @@ The first step in creating a model for the gender, race, and age classification 
 
 These models offered valuable insights into the dataset's characteristics and set a reference point for evaluating the performance of more complex deep learning architectures.
 
-The process of creating baseline model is provided in the [Baseline ML model creation Notebook.](https://github.com/TuringCollegeSubmissions/vruzga-DL.3.5/blob/master/notebooks/7.ML_model_train.ipynb)
+The process of creating baseline model is provided in the [Baseline ML model creation Notebook.](https://github.com/MiestoMeska/CNN_AgeGenderRace/blob/main/notebooks/7.ML_model_train.ipynb)
 
 - **CNN Model Creation Routine:**
 
@@ -67,11 +67,11 @@ The CNN model experimentation was based on the EfficientNet pre-trained architec
 * Adding a shared layer for feature extraction followed by three separate heads for gender, race, and age classification tasks.
 * Experimenting with the complexity of the shared and head layers, including varying the number of layers and neurons.
 * Testing different activation functions, such as ReLU, Leaky ReLU, and sigmoid, to optimize performance for each classification task.
-* The routine for training models is documented in the [Model Training Notebook.](https://github.com/TuringCollegeSubmissions/vruzga-DL.3.5/blob/master/notebooks/8.CNN_train.ipynb)
+* The routine for training models is documented in the [Model Training Notebook.](https://github.com/MiestoMeska/CNN_AgeGenderRace/blob/main/notebooks/8.CNN_train.ipynb)
 
 All model metrics were tracked using TensorBoard, allowing for real-time monitoring of training and validation performance. This facilitated the selection of the best-performing model based on comprehensive performance comparisons.
 
-![Metrics](https://github.com/TuringCollegeSubmissions/vruzga-DL.3.5/blob/master/assets/img/train_metrics.JPG)
+![Metrics](https://github.com/MiestoMeska/CNN_AgeGenderRace/blob/main/assets/img/train_metrics.JPG)
 
 - **Final Model Evaluation:**
 
@@ -90,7 +90,7 @@ The trained multi-output EfficientNet-based model shows promising results in gen
 * Weak Age Prediction: 46% accuracy for age groups, with AUC scores 0.61–0.70 for older categories.
 * Class Imbalance Sensitivity: Struggles with underrepresented classes, affecting generalization.
 
-Detailed evaluation and visualizations ar provided in [Model Evaluation Notebook.](https://github.com/TuringCollegeSubmissions/vruzga-DL.3.5/blob/master/notebooks/9.model_eval.ipynb)
+Detailed evaluation and visualizations ar provided in [Model Evaluation Notebook.](https://github.com/MiestoMeska/CNN_AgeGenderRace/blob/main/notebooks/9.model_eval.ipynb)
 
 
 ## Conclusions of the Project
