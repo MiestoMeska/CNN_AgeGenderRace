@@ -4,7 +4,7 @@ import numpy as np
 from PIL import Image
 import matplotlib.pyplot as plt
 
-def validate_and_display_images_UTK(folder_path):
+def validate_and_display_images(folder_path):
     """
     Validate the file names in the specified folder, check for invalid files, and display invalid files in a 3-wide layout.
     

@@ -3,7 +3,7 @@ import re
 import pandas as pd
 import numpy as np
 
-def extract_class_data_UTK(folder_path):
+def extract_class_data(folder_path):
     """
     Extract class data from filenames and create a pandas DataFrame with columns for filename, age, gender, and race.
     If a filename does not follow the expected pattern, fill age, gender, and race with 'NaN'.

@@ -1,6 +1,6 @@
 import pandas as pd
 
-def get_class_ranges_UTK(df):
+def get_class_ranges(df):
     """
     Get the ranges (min, max) of the 'age', 'gender', and 'race' columns in the DataFrame.
     
